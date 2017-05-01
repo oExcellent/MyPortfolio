@@ -10,15 +10,17 @@ $title = 'Max Walters Stack Developer';
 ?>
 
 <?php if(isset($_POST['name'])){
-	$stripped = htmlentities($_POST['name']);
-	$name = $stripped;
+	$name = htmlentities($_POST['name']);
+	 
 }
 
 if(isset($_POST['email'])){
 	
 	
 	$userEmail = htmlentities($_POST['email']);
-	$start = "From: $userEmail \r\n";
+	$headers = 'From: max@devmw.com' . "\r\n" .
+			'Reply-To: '.$userEmail. "\r\n".
+			 ' ' . $name . ' said ';
 }
 
 if(isset($_POST['Subject'])){
@@ -61,7 +63,6 @@ $errors = 0;
     margin: 0px;
     color:#14bceb;
     background-color: #14bceb;
-    text-shadow: 0 0 5px black;
     background-image: url("MaxWaltersPortfolio/Assets/web-design-2038872.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -187,12 +188,12 @@ css form stuff
 css form stuff
 */
 
-.myFormArea {
+.contactFormArea {
 	opacity: 0.9;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 500px;
-	background: #292c2f;
+	background: #fafafa;
 	padding: 20px 30px 20px 30px;
 	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #14bceb;
@@ -203,21 +204,21 @@ css form stuff
 	-moz-border-radius: 5px;
 	text-align:center;
 }
-.myFormArea h1 {
+.contactFormArea h1 {
     padding: 0px 0px 10px 40px;
     display: block;
     border-bottom: 1px solid #444;
     margin: -10px -30px 30px -30px;
 }
-.myFormArea h1>span {
+.contactFormArea h1>span {
     display: block;
     font-size: 11px;
 }
-.myFormArea label {
+.contactFormArea label {
     display: block;
     margin: 0px 0px 5px;
 }
-.myFormArea label>span {
+.contactFormArea label>span {
     float: left;
     width: 20%;
     text-align: right;
@@ -225,7 +226,7 @@ css form stuff
     margin-top: 10px;
     font-weight: bold;
 }
- .myFormArea input[type="text"],.myFormArea input[type="email"],textarea, .myFormArea select {
+ .contactFormArea input[type="text"],.contactFormArea input[type="email"],textarea, .contactFormArea select {
 	border: none;
 	color: black;
 	height: 25px;
@@ -262,7 +263,7 @@ css form stuff
 
 
 
-.myFormArea select {
+.contactFormArea select {
     background: #DFDFDF url('down-arrow.png') no-repeat right;
     background: #DFDFDF url('down-arrow.png') no-repeat right;
     appearance:none;
@@ -276,7 +277,7 @@ css form stuff
 	line-height: 25px;
 }
 
-.myFormArea .button {
+.contactFormArea .button {
 	background: #14bceb;
 	border: none;
 	padding: 10px 25px 10px 25px;
@@ -292,7 +293,7 @@ css form stuff
 width:360px;height:48px;margin-left:102px;border-top:none;;
 }
 
-.myFormArea .button:hover {
+.contactFormArea .button:hover {
     color: #333;
     background-color: #EBEBEB;
 }
@@ -310,27 +311,41 @@ color: yellow;
 color: green;
 }
 
-.Success, Warning{
+.Success, .Warning{
 text-align: center;
-padding-left:30%;
+
 }
 
+.Button1:hover {
+   background-color: rgba(255, 0, 0, 0.0);
+    color: #14bceb;
+    border: 2px solid white; 
+font-size:20px;
+cursor:pointer;
 
+
+}
 .Button1 {
    background-color: rgba(255, 0, 0, 0.0);
     color: #f1780e;
     border: 2px solid #f1780e; 
 font-size:20px;
+cursor:pointer;
+
 
 }
 
 #Centerpiece{
-    padding-top:10%;
     text-align:center;
     opacity:0.8;
+   
+    background-color:white;
+    margin-top: 300px;
+    height:160px;
 }
 #myName{
 color:light grey;
+
 }
 
 
@@ -351,19 +366,19 @@ background-image: url("MaxWaltersPortfolio/Assets/sky-690293_1920.jpg");
 
 #aboutDiv{
 width:100%;
-background-color:#14bceb;
 color: #ab5454;
 text-align: center;
-opacity:0.9;
-background-image: url("MaxWaltersPortfolio/Assets/coding-1841550_1920.jpg");
+ opacity:0.9;
 background-size: 100% 100% ;
-
+background-color:#292c2f;
 }
 
 #contact{
-widt:100%;
-background-color:#292c2f;
+width:100%;
+background-color:#fafafa;
 padding-top:5%;
+ opacity:0.9;
+
 }
 
 #titleM{
@@ -373,7 +388,7 @@ color: #ab5454;
 color:#14bceb;
 }
 .demo{
-length:150px; 
+height:150px; 
 width:250px;
 }
 br.myClass 
@@ -388,8 +403,9 @@ text-align:center;
 background-image: url("MaxWaltersPortfolio/Assets/sky-690293_1920.jpg");
 }
 
-h6{
-    text-shadow: 0 0 15px black;
+#subtitle{
+color:#f1780e
+font-size:15px;
 }
     </style>
 </head>
@@ -407,7 +423,7 @@ h6{
   <div id="Centerpiece">
   <h1 id="myName" ><span style="color: #f1780e">M</span>AX <span style="color: #f1780e">W</span>ALTERS</h1>
  <hr class="line" >
-  <h6>COMPUTER PROGRAMMER & FULL STACK WEB DEVELOPER</h6>
+  <p id="subtitle"><b>COMPUTER PROGRAMMER & FULL STACK WEB DEVELOPER</b></p>
   <button onclick="window.location.href='MaxWaltersPortfolio/Pages/myWork.php'" class="Button1">WORK</button>
   <button onclick="window.location.href='MaxWaltersPortfolio/Pages/about.php'" class="Button1">ABOUT</button>
   <button onclick="window.location.href='MaxWaltersPortfolio/Pages/contact.php'" class="Button1">CONTACT</button>
@@ -416,42 +432,25 @@ h6{
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div id="work">
-<h2  id="titleW">Some of my work.</h2>
-
-<a href = "MaxWaltersPortfolio/demos/demo1.php" target="_blank"> 
-<img id="work1" alt="link to demo" class="demo" src="MaxWaltersPortfolio/Assets/img1.jpg">
-</a>
-
-
-
-<a href = "MaxWaltersPortfolio/demos/demo1.php" target="_blank"> 
-<img alt="link to demo" class="demo" src="MaxWaltersPortfolio/Assets/img1.jpg">
+<br>
+<p style ="color:black">RESUME - MY ONLINE RESUME.</p>
+<a href = "http://devmw.com/MaxWaltersPortfolio/resume/Index.php" target="_blank"> 
+<img alt="link to resume" class="demo" src="MaxWaltersPortfolio/Assets/resume.png">
 </a><br>
 
-<a href = "MaxWaltersPortfolio/demos/demo1.php" target="_blank"> 
-<img alt="link to demo" class="demo" src="MaxWaltersPortfolio/Assets/img1.jpg"    >
-</a>
 
-<a href = "MaxWaltersPortfolio/demos/demo1.php" target="_blank"> 
-<img alt="link to demo" class="demo" src="MaxWaltersPortfolio/Assets/img1.jpg"    >
-</a>
-
-
-<a href = "MaxWaltersPortfolio/demos/demo1.php" target="_blank"> 
-<img alt="link to demo" class="demo" src="MaxWaltersPortfolio/Assets/img1.jpg">
-</a>
-
-<a href = "MaxWaltersPortfolio/demos/demo1.php" target="_blank"> 
-<img alt="link to demo" class="demo" src="MaxWaltersPortfolio/Assets/img1.jpg"    >
+<h2  id="titleW">SOME OF MY WORK.</h2>
+GITHUB - MY REMOTE GITHUB REPOSITORY.
+<br>
+<a href = "https://github.com/oExcellent" target="_blank"> 
+<img alt="link to demo" class="demo" src="MaxWaltersPortfolio/Assets/GitHub-Logo.png">
+</a><br>
+<p style ="color:black">GET IT DONE - A WEBSITE TO DISCOURAGE PROCRASTINATION.</p>
+<a href = "http://devmw.com/MaxWaltersPortfolio/GetItDone/Pages/Index.php" target="_blank"> 
+<img alt="link to demo" class="demo" src="MaxWaltersPortfolio/Assets/GIDP2.png">
 </a><br>
 
-<a href = "MaxWaltersPortfolio/demos/demo1.php" target="_blank"> 
-<img alt="link to demo" class="demo" src="MaxWaltersPortfolio/Assets/img1.jpg"    >
-</a>
 
-<a href = "MaxWaltersPortfolio/demos/demo1.php" target="_blank"> 
-<img alt="link to demo" class="demo" src="MaxWaltersPortfolio/Assets/img1.jpg"    >
-</a>
 
 <br><br>
 
@@ -464,7 +463,7 @@ h6{
 
 
 <div id="bg"><br><br>
-<h1 id="titleM">My Story</h1>
+<h1 id="titleM">MY STORY</h1>
 <img id="myImage" src="MaxWaltersPortfolio/Assets/Max.png" alt="Picture of Max.">
 
 
@@ -485,13 +484,6 @@ degree of my dreams, graduated, and get to work in the feild I am absolutly craz
 </div>
 </div>
 
-<div id="More">
-I create beautiful and responsive websites<br>
-using HTML / CSS / JavaScript / PHP.<br>
-I also know Java / C# / C++  / SQL / MySQL. 
-
-
-</div>
 
 
 <div id="contact">
@@ -499,13 +491,13 @@ I also know Java / C# / C++  / SQL / MySQL.
 
 
 
-<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" class = "myFormArea">
+<form  action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" class = "contactFormArea">
 
 
 <h1>Contact Max 
-<span>Please fill all the texts in the fields.</span>
+<span id="contactForm">Please fill all the texts in the fields.</span>
     </h1>
-<label for="name">
+<label  for="name">
             <span <?php if( isset($_POST['SendEmail']) && empty($_POST['name'])){
 	
 	 echo 'class = "error"';
@@ -604,19 +596,29 @@ echo  $message ;
 
 
 <?php 
-$adminEmail = 'Max@devmw.com';
+$adminEmail = 'max@devmw.com';
+
+/*
+ * 'From: webmaster@example.com' . "\r\n" .
+    'Reply-To: webmaster@example.com' . "\r\n" .
+    'X-Mailer: PHP/'
+ */
 
 if (isset($_POST['SendEmail']) && $errors == 0){
-	mail($adminEmail,$subject,$message,$start . ' ' . $name . ' said ');
-	mail($userEmail,'Email Received, Thank you!',$message,'Your email read ' . $start . ' ' . $name . ' said, ');
+	mail('max@devmw.com','Devmw Email Received from ' . $name ,'UEmail: '.$userEmail. '. Their email read, ' . $subject . ' ' . $message);
+	mail($userEmail,'Email Received, Thank you!' ,'Your email read, ' . $message . '. please dont reply to this email, Max Will contact you shorty');
 	echo '<p id="suc" class="Success">Email sent, you should recieve confirmation shortly!</p>';
-	echo '<script>window.location = "#contact";</script>';
+	echo '<script>window.location = "#contactForm";</script>';
+	
+
 }
 
 elseif(isset($_POST['SendEmail']) && $errors >= 1){
 	echo '<p id="err" class="error">Email not sent, please review errors</p>';
-	echo '<script>window.location = "#contact";</script>';
+	echo '<script>window.location = "#contactForm";</script>';
 }
+
+
 
 
 ?>
@@ -625,7 +627,14 @@ elseif(isset($_POST['SendEmail']) && $errors >= 1){
 
 
 </div>
+<!-- 
+<div id="More">
+I create beautiful and responsive websites<br>
+using HTML / CSS / JavaScript / PHP.<br>
+I also know Java / C# / C++  / SQL / MySQL. 
 
+ -->
+</div>
 
 </main>
 

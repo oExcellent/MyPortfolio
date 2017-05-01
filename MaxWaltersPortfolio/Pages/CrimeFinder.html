@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <title>Crime Finder</title>
+
+    <meta charset="UTF-8">
+    <meta name="desription" content="A page where we search a a api for searching crimes for a city">
+   
+    <link rel="stylesheet" type="text/css" href="../Styles/style2.css">
+
+   
+
+
+
+</head>
+
+<body>
+
+
+
+<main>
+
+<nav id = "ht">
+
+<ul>
+  <li><a href="CrimeFinder.html">HOME</a></li>
+ 
+  
+  
+  <li style="float:right"><a href="contact.php">CONTACT</a>
+</li>
+</ul>
+
+</nav>
+
+
+
+<!--
+The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code 
+The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code 
+The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code 
+-->
+
+<div id="SearchDiv">
+<br><br>
+<h1>Crime Finder</h1><br><br>
+
+<!--HTML -->
+
+	<label for="search">City, State</label>
+	<input type="text" name="search" placeholder="City, State" id="search">
+	<button name="submit" onclick="getSearch()">Search</button> 
+<br><br>
+
+<div id="results">
+
+
+
+
+
+
+<!--Java Script!!-->
+<script type="text/javascript">
+
+
+
+//logic for button click
+function getSearch(){
+
+	var query = document.getElementById("search").value;
+    var result ="Showing results for " + query + ".<br><br>" ;
+
+var locations;
+    
+    document.getElementById("results").innerHTML = locations;
+
+
+
+if (document.getElementById("search").value == "Florida"){
+	locations = florida;
+}
+
+if (document.getElementById("search").value == "Mississippi"){
+	locations = mississippi;
+}
+
+if (document.getElementById("search").value == "Georgia"){
+	locations = georgia;
+}
+
+if (document.getElementById("search").value == "South Carolina"){
+	locations = southCarolina;
+}
+
+if (document.getElementById("search").value == "Miami"){
+	locations = miami;
+}
+
+if (document.getElementById("search").value == "Orlando"){
+	locations = orlando;
+}
+
+if (document.getElementById("search").value == "Tampa"){
+	locations = tampa;
+}
+
+if (document.getElementById("search").value == "Ft-Lauderdale"){
+	locations = ftlauderdale;
+}
+
+if (document.getElementById("search").value == "Jacksonville"){
+	locations = jacksonville;
+}
+
+
+
+}
+
+	
+</script>
+
+</div>
+</div>
+
+
+
+<!--
+The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code 
+The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code 
+The actual code The actual code The actual code The actual code The actual code The actual code The actual code The actual code 
+-->
+</main>
+
+		<div class="clear"></div>
+
+
+
+
+<footer class="myFooter">
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a href="index.php">Home</a>
+					·
+					<a href="MaxWaltersPortfolio/Pages/myWork.php">Work</a>
+					·
+					<a href="#ht"> <img src="MaxWaltersPortfolio/Assets/top.png" alt ="back 2 top image" height = "10" width= "10"></a>
+					·
+					 <a href="MaxWaltersPortfolio/Pages/contact.php">Contact Form</a>
+					·
+					 <a href="MaxWaltersPortfolio/Pages/about.php">About</a>
+					 
+				</p>
+
+				<p class="myOrganaizationName">DevMW &copy; 2017</p>
+
+			</div>
+
+			<div class="footer-right">
+
+
+				<a href="mailto:Max@devmw.com">Email US</a>
+
+
+	
+	</div>
+
+
+		</footer>
+</body>

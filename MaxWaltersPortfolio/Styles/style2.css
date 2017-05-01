@@ -1,23 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
 
-    <title><?php echo $title; //prettyphoto bootstrap plugin?></title>
-
-    <meta charset="UTF-8">
-    <meta name="desription" content="A page where we search a database for a invoice and we can add and modify invoices">
-    <meta name="keyword" content="Sql, Php, developer,grest prices, best, web, developer,low cost, fast, work,quality">
-    <meta name="author" content="Max Walters">
-    
-	<link rel="icon" href="../Assets/MWFAVICON.JPG">
-    <link rel="stylesheet" type="text/css" href="../Styles/style1.css">
-
-    <style>
-    
-    nav ul li a :active{ 
-    background-color: red;
-}
-    
     #ht{
     color: #14bceb;
     text-align: center;
@@ -74,8 +55,6 @@ ul {
     background-color: #292c2f;
     opacity: 0.9;
 }
-
-
 
 li {
     /*display: inline;*/
@@ -382,7 +361,7 @@ color: yellow;
 color: green;
 }
 
-.Success, Warning{
+.Success, .Warning{
 text-align: center;
 padding-left:30%;
 }
@@ -451,8 +430,8 @@ footer, .push {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
-footer{
-
+#myFooter{
+width: 100%;
 text-align: center;
 padding-top: 100%;
 }
@@ -471,39 +450,7 @@ color:white;
 
 }
 
-.demo{
-length:150px; 
-width:250px;
+
+#SearchDiv{
+padding-left: 41%;
 }
-#sBox{
-position: absolute;
-padding-left: 45%;
-}
-    </style>
-
-
-</head>
-
-<body>
-
-
-
-<main>
-
-<nav id = "ht">
-
-<ul>
-  <li><a href="../../index.php">HOME</a></li>
-  <li><a href="myWork.php">WORK</a></li>
-  <li><a href="about.php">ABOUT</a></li>
-  
-  
-  <li style="float:right"><a href="contact.php">CONTACT</a>
-</li>
-</ul>
-
-</nav>
-<header >
-    <?php if (!empty($header)){ echo '<h1 id="ht">' . $header . '</h1>'; }?>
-</header>
-
