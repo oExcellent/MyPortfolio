@@ -423,7 +423,7 @@ font-size:15px;
   <div id="Centerpiece">
   <h1 id="myName" ><span style="color: #f1780e">M</span>AX <span style="color: #f1780e">W</span>ALTERS</h1>
  <hr class="line" >
-  <p id="subtitle"><b>COMPUTER PROGRAMMER & FULL STACK WEB DEVELOPER</b></p>
+  <p id="subtitle"><b>COMPUTER PROGRAMMER & FULL STACK WEB DEVELOPER - PORTFOLIO</b></p>
   <button onclick="window.location.href='MaxWaltersPortfolio/Pages/myWork.php'" class="Button1">WORK</button>
   <button onclick="window.location.href='MaxWaltersPortfolio/Pages/about.php'" class="Button1">ABOUT</button>
   <button onclick="window.location.href='MaxWaltersPortfolio/Pages/contact.php'" class="Button1">CONTACT</button>
