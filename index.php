@@ -433,7 +433,7 @@ font-size:15px;
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div id="work">
 <br>
-<p style ="color:black">RESUME - MY ONLINE RESUME.</p>
+<p style ="color:white">RESUME - MY ONLINE RESUME.</p>
 <a href = "http://devmw.com/MaxWaltersPortfolio/resume/Index.php" target="_blank"> 
 <img alt="link to resume" class="demo" src="MaxWaltersPortfolio/Assets/resume.png">
 </a><br>
